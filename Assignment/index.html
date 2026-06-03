@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Unit Converter</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Universal Unit Converter</h1>
+        <p>Convert between different units seamlessly</p>
+    </header>
+
+    <main>
+        <nav class="category-nav">
+            <h2>Select Category</h2>
+            <div class="category-grid">
+                <button class="category-btn active" data-category="length">
+                    <span class="icon">📏</span>
+                    <span class="label">Length</span>
+                </button>
+                <button class="category-btn" data-category="mass">
+                    <span class="icon">⚖️</span>
+                    <span class="label">Mass/Weight</span>
+                </button>
+                <button class="category-btn" data-category="temperature">
+                    <span class="icon">🌡️</span>
+                    <span class="label">Temperature</span>
+                </button>
+                <button class="category-btn" data-category="digital">
+                    <span class="icon">💾</span>
+                    <span class="label">Digital Storage</span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="converter-section">
+            <div class="converter-container">
+                <div class="conversion-block">
+                    <label for="input-left">From</label>
+                    <input 
+                        type="number" 
+                        id="input-left" 
+                        class="conversion-input" 
+                        placeholder="0"
+                        step="any"
+                    >
+                    <select id="unit-left" class="unit-select">
+                        <!-- Units will be populated dynamically -->
+                    </select>
+                </div>
+
+                <div class="swap-icon">
+                    <span>⇄</span>
+                </div>
+
+                <div class="conversion-block">
+                    <label for="input-right">To</label>
+                    <input 
+                        type="number" 
+                        id="input-right" 
+                        class="conversion-input" 
+                        placeholder="0"
+                        step="any"
+                    >
+                    <select id="unit-right" class="unit-select">
+                        <!-- Units will be populated dynamically -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="formula-display" id="formula-display">
+                <p>Select units to see conversion formula</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Web Engineering Assignment - University of Balochistan</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
